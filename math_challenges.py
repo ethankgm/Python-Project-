@@ -1,7 +1,9 @@
+# Import necessary libraries
 from random import randint
 from math import factorial as math_factorial
 
 
+# Factorial Challenge
 def math_challenge_factorial():
     n = randint(1, 10)
     print(f"Math Challenge: Calculate the factorial of {n}.")
@@ -17,6 +19,7 @@ def math_challenge_factorial():
         return False
 
 
+# Linear Equation Challenge
 def solve_linear_equation():
     a = randint(1, 10)
     b = randint(1, 10)
@@ -41,6 +44,7 @@ def math_challenge_equation():
         return False
 
 
+# Prime Number Challenge
 def is_prime(n):
     if n <= 1:
         return False
@@ -74,9 +78,13 @@ def math_challenge_prime():
         print("Invalid input. Please enter an integer.")
         return False
 
+
+# Challenge Selection and Execution
 def math_challenge():
     challenges = [math_challenge_factorial, math_challenge_equation, math_challenge_prime]
     challenge = randint(0, 2)  # Randomly choose a challenge index
     challenges[challenge]()  # Execute the chosen challenge
 
+
+# Run the selected challenge
 math_challenge()
