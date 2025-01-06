@@ -1,5 +1,3 @@
-import random
-
 def introduction():
     print("Welcome to the Fort Boyard Simulator!")
     print("In this game, your team will face various challenges to earn keys.")
