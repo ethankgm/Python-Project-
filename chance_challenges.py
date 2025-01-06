@@ -2,15 +2,19 @@ import random
 
 # Shell Game
 def shell_game():
+    """
+    Function to play the shell game where the key is hidden under one of the shells.
+    The player has 2 attempts to guess the correct shell.
+    """
     shells = ['A', 'B', 'C']
     attempts = 0
-    key_shell = None
+    key_shell = random.choice(shells)  # Randomly choose the shell hiding the key
 
     print("Welcome to the Shell Game!")
     print("You have 2 attempts to find the key hidden under one of the shells: A, B, or C.")
 
+    # Loop through the 2 attempts
     for attempt in range(1, 3):
-        key_shell = random.choice(shells)
         print(f"\nRemaining attempts: {2 - attempts}")
         player_choice = input("Choose a shell (A, B, or C): ").upper()
 
@@ -30,12 +34,18 @@ def shell_game():
 
 # Dice Game
 def roll_dice_game() -> bool:
+    """
+    Function to play the dice game where both the player and the game master roll dice.
+    The player wins if they roll a 6, and the game master wins if they roll a 6.
+    The player has 3 attempts.
+    """
     attempts = 3
 
     for attempt in range(attempts):
         print(f"Attempts remaining: {attempts - attempt}")
         input("Press 'Enter' to roll the dice...")
 
+        # Rolling dice for the player
         player_dice = (random.randint(1, 6), random.randint(1, 6))
         print(f"Player rolled: {player_dice}")
 
@@ -43,6 +53,7 @@ def roll_dice_game() -> bool:
             print("Player wins!")
             return True
 
+        # Rolling dice for the game master
         game_master_dice = (random.randint(1, 6), random.randint(1, 6))
         print(f"Game Master rolled: {game_master_dice}")
 
@@ -57,16 +68,28 @@ def roll_dice_game() -> bool:
 
 # Chance Challenge
 def challenge_one():
+    """
+    Sample challenge one.
+    """
     return "Challenge One Completed!"
 
 def challenge_two():
+    """
+    Sample challenge two.
+    """
     return "Challenge Two Completed!"
 
 def chance_challenge():
+    """
+    Randomly selects a challenge from the available ones.
+    """
     challenges = [challenge_one, challenge_two]
     challenge = random.choice(challenges)
     return challenge()
 
 # Test games
+print("Starting Shell Game:")
 shell_game()
+
+print("\nStarting Dice Game:")
 roll_dice_game()
