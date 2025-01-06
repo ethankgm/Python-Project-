@@ -1,4 +1,5 @@
 from random import randint
+from math import factorial as math_factorial
 
 def factorial(n):
     if n < 0:
@@ -8,9 +9,6 @@ def factorial(n):
         return 1
     else:
         return n * factorial(n - 1)
-
-from random import randint
-from math import factorial
 
 def math_challenge_factorial():
     n = randint(1, 10)
